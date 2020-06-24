@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      Calculadora Básica
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+ <ion-item>
+   <ion-label position="floating">Digite o primeiro número:</ion-label>
+   <ion-input type="number" [(ngModel)] = "num1"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">Digite o segundo número:</ion-label>
+  <ion-input type="number" [(ngModel)] = "num2"></ion-input>
+</ion-item>
+</ion-card>
+
+<ion-card>
+<ion-item color="medium">
+  <ion-label position="floating">Resultado:</ion-label>
+</ion-item>
+<ion-item>
+  <ion-label></ion-label>
+  <ion-input type="number" [(ngModel)] = "resul"> {{ resultado }}</ion-input>
+</ion-item>
+</ion-card>
+
+
+<ion-button expand="block" (click)="soma()" color="tertiary">Soma</ion-button>
+<ion-button expand="block" (click)="sub()" color="tertiary">Subtração</ion-button>
+<ion-button expand="block" (click)="mult()" color="tertiary">Multiplicação</ion-button>
+<ion-button expand="block" (click)="divi()" color="tertiary">Divisão</ion-button>
+<br>
+
+<ion-button expand="block" (click)="limpar()" color="tertiary" >Limpar</ion-button>
+</ion-content>
